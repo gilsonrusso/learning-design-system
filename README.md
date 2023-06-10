@@ -19,3 +19,10 @@ convert to esm, commonjs.
 ``
 use when the project has dependency between an other project
 ``
+
+### React package
+#### We need install react development dependency, the project that install our lib has react instaled. 
+``
+npm i -D react @types/react @types/react-dom 
+add flag in package.json script: --external react",
+``
