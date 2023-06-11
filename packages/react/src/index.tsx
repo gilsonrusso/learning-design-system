@@ -1,19 +1,20 @@
-import { ThemeProvider, Box, Button } from "@mui/material";
-import styled from "@emotion/styled";
-import { theme } from "./styles";
+import { Button } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import { ThemeProvider } from "@mui/material";
+import { theme } from './styles';
 
-const StyledBox = styled(Box)(() => ({
-  height: "250px",
-  width: "250px",
-  backgroundColor: theme.status.danger,
-}));
 
-export function App() {
+const MatButton = styled(Button)(({theme}) => ({
+  borderRadius: theme.shape.borderRadius,
+  color: theme.palette.secondary.main,
+  backgroundColor: theme.palette.primary['300'],
+}))
+
+
+export const  MyButton = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Box bgcolor={"primary"}></Box>
-      <Button color={"neutral"}></Button>
-      <StyledBox></StyledBox>
+      <MatButton>Click Me</MatButton>
     </ThemeProvider>
   );
 }

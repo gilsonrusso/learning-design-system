@@ -15,13 +15,15 @@ export const theme = createTheme({
     danger: colors.green500,
   },
   palette: {
-    primary: {
+    ['primary']: {
+      main: colors.green500,
       "300": colors.green300,
       "500": colors.green500,
       "700": colors.green700,
       "900": colors.green900,
     },
     neutral: {
+      main: colors.gray500,
       "100": colors.gray100,
       "200": colors.gray200,
       "400": colors.gray400,
@@ -37,7 +39,7 @@ export const theme = createTheme({
     fontWeightBold: fontWeights.bold,
     fontWeightRegular: fontWeights.regular,
     fontWeightMedium: fontWeights.medium,
-    fontSize: +fontSizes.md,
+    fontSize: +fontSizes["9xl"],
   },
   shape: {
     borderRadius: +radii.md,

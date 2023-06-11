@@ -26,3 +26,11 @@ use when the project has dependency between an other project
 npm i -D react @types/react @types/react-dom 
 add flag in package.json script: --external react",
 ``
+## folder Docs storybook
+``
+npx sb init --builder @storybook/builder-vite --type react --use-npm
+
+npm i -D vite @vitejs/plugin-react
+
+npm i react react-dom
+``
