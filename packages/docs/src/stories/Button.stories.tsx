@@ -1,10 +1,17 @@
 import { StoryObj, Meta } from '@storybook/react'
 
-import { MyButton } from "@gsr-ui/react"
+import { Button, ButtonProps } from "@gsr-ui/react"
 
-export default {
-    title: 'Button', 
-    component: MyButton
-} as Meta
+const meta: Meta<typeof Button> = {
+  component: Button,
+  args: {
+    children: 'Enviar',
+  },
+};
 
-export const Primary: StoryObj = {}
+export default meta;
+type Story = StoryObj<typeof Button>;
+
+export const Primary: Story = {
+  
+};

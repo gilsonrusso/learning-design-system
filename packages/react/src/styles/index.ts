@@ -23,7 +23,7 @@ export const theme = createTheme({
       "900": colors.green900,
     },
     neutral: {
-      main: colors.gray500,
+      main: colors.green500,
       "100": colors.gray100,
       "200": colors.gray200,
       "400": colors.gray400,
@@ -40,8 +40,5 @@ export const theme = createTheme({
     fontWeightRegular: fontWeights.regular,
     fontWeightMedium: fontWeights.medium,
     fontSize: +fontSizes["9xl"],
-  },
-  shape: {
-    borderRadius: +radii.md,
   },
 });

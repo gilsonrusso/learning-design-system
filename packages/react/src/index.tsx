@@ -1,20 +1,28 @@
-import { Button } from '@mui/material';
-import { styled } from '@mui/material/styles';
-import { ThemeProvider } from "@mui/material";
+import { Button as MatButton, ThemeProvider, Tooltip } from '@mui/material';
+import classNames from 'classnames';
 import { theme } from './styles';
+import styled from '@emotion/styled';
+import { ComponentProps } from 'react';
+import {colors} from '@gsr-ui/tokens'
 
+// export type ButtonProps = {
+//   type?: 'button' | 'submit' | 'reset' | undefined;
+//   onClick?: Function;
+//   disabled?: boolean;
+//   success?: boolean;
+//   primary?: boolean;
+//   secondary?: boolean;
+//   bordered?: boolean;
+//   danger?: boolean;
+//   neutral?: boolean;
+//   tooltip?: string;
+//   children?: React.ReactNode
+// }
 
-const MatButton = styled(Button)(({theme}) => ({
-  borderRadius: theme.shape.borderRadius,
-  color: theme.palette.secondary.main,
-  backgroundColor: theme.palette.primary['300'],
-}))
+export const Button = styled(MatButton)({
+  color: theme.palette.neutral?.[900],
+  background: colors.green300,
+})
 
+export type ButtonProps = ComponentProps<typeof Button>
 
-export const  MyButton = () => {
-  return (
-    <ThemeProvider theme={theme}>
-      <MatButton>Click Me</MatButton>
-    </ThemeProvider>
-  );
-}

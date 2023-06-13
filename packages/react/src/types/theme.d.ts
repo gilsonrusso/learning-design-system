@@ -1,4 +1,4 @@
-import { ThemeOptions, PaletteColorOptions } from "@mui/material/styles";
+import { ThemeOptions, PaletteColorOptions, S } from "@mui/material/styles";
 import React from "react";
 
 declare module "@mui/material/styles" {
